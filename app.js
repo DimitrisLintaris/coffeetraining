@@ -38,7 +38,7 @@ sectionsRef.on('value', (snapshot) => {
             const isFull = count >= CAPACITY;
             const sectionName = key.toUpperCase().replace('CLASS_', 'ΤΜΗΜΑ ');
             
-            statusEl.innerHTML = `${sectionName}: ${count}/${CAPACITY} | ${isFull ? '🚫 ΠΛΗΡΕΣ' : '✅ Διαθέσιμο'}`;
+            statusEl.innerHTML = `${sectionName}: ${count}/${CAPACITY} | ${isFull ? '🚫 ΠΛΗΡΕΣ' : ' Διαθέσιμο'}`;
             
             // Αλλαγή κλάσης CSS για χρώμα
             statusEl.classList.toggle('full', isFull);
@@ -124,4 +124,5 @@ document.getElementById('registration-form').addEventListener('submit', function
             messageEl.classList.add('error');
         }
     });
+
 });
