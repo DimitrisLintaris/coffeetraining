@@ -19,7 +19,7 @@ const registrationsRef = db.ref('registrations');
 
 // Ορίζουμε τα κλειδιά των τμημάτων
 const sectionKeys = ['class_a', 'class_b', 'class_c', 'class_d', 'class_e', 'class_f'];
-const CAPACITY = 6; // Μέγιστη χωρητικότητα ανά τμήμα
+const CAPACITY = 5; // Μέγιστη χωρητικότητα ανά τμήμα
 
 // ----------------------------------------------------------------------
 // A. Λογική Real-Time Ενημέρωσης (onValue Listener)
@@ -126,3 +126,4 @@ document.getElementById('registration-form').addEventListener('submit', function
     });
 
 });
+
