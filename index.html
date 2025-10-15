@@ -10,6 +10,7 @@
             <h1 class="form-title">Δήλωση Συμμετοχής</h1>			
         </div>
         <p class="form-description">Παρακαλώ συμπληρώστε τη φόρμα για να δηλώσετε συμμετοχή στα τμήματα εκπαίδευσης καφέ.</p>
+
         <h3>Ζωντανή Κατάσταση Θέσεων</h3>
         <p>Παρακολουθήστε ζωντανά την κατάσταση των     <span style="color: #90EE90; font-size: 16px; font-weight: bold;">
         διαθέσιμων θέσεων
@@ -82,13 +83,67 @@
                 
                 <button type="submit" id="submit-button">Δήλωση Συμμετοχής</button>
             </form>
+		</div>
 
             <div id="message"></div>
-            
+        <hr class="separator">            
+
+        <!-- ΝΕΟΣ ΠΙΝΑΚΑΣ ΠΡΟΓΡΑΜΜΑΤΟΣ -->
+        <div class="schedule-card">
+            <h2>Πρόγραμμα Εκπαίδευσης</h2>
+            <table id="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Τμήμα</th>
+                        <th>Ημέρα</th>
+                        <th>Ώρα</th>
+                        <th>Ημερομηνία Έναρξης</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Τμήμα Α</td>
+                        <td>Δευτέρα-Τρίτη</td>
+                        <td>17:00 - 21:00</td>
+                        <td>3-4 Νοεμβρίου και 10-11 Νοεμβρίου </td>
+                    </tr>
+                    <tr>
+                        <td>Τμήμα Β</td>
+                        <td>Τετάρτη-Πέμπτη</td>
+                        <td>17:00 - 21:00</td>
+                        <td>5-6 Νοεμβρίου και 12-13 Νοεμβρίου </td>
+                    </tr>
+                    <tr>
+                        <td>Τμήμα Γ</td>
+                        <td>Παρασκευή-Σάββατο</td>
+                        <td>17:00 - 21:00</td>
+                        <td>7-8 Νοεμβρίου και 14-15 Νοεμβρίου </td>
+                    </tr>
+                    <tr>
+                        <td>Τμήμα Δ</td>
+                        <td>Δευτέρα-Τρίτη</td>
+                        <td>17:00 - 21:00</td>
+                        <td>17-18 Νοεμβρίου και 24-25 Νοεμβρίου </td>
+                    </tr>
+                    <tr>
+                        <td>Τμήμα Ε</td>
+                        <td>Τετάρτη-Πέμπτη</td>
+                        <td>17:00 - 21:00</td>
+                        <td>19-20 Νοεμβρίου και 26-27 Νοεμβρίου </td>
+                    </tr>
+                    <tr>
+                        <td>Τμήμα ΣΤ</td>
+                        <td>Παρασκευή-Σάββατο</td>
+                        <td>17:00 - 21:00</td>
+                        <td>21-22 Νοεμβρίου και 28-29 Νοεμβρίου </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- ΤΕΛΟΣ ΠΙΝΑΚΑ ΠΡΟΓΡΑΜΜΑΤΟΣ -->
         </div> </div> <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
     <script src="app.js"></script> 
+ <hr class="separator">
 
 </body>
-
-
