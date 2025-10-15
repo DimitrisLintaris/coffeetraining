@@ -1,6 +1,9 @@
-/* style.css - Modern Design */
+/* style.css - Modern Design & Responsive */
 
-/* Γενικές ρυθμίσεις */
+/* ================================================= */
+/* 1. ΓΕΝΙΚΕΣ ΡΥΘΜΙΣΕΙΣ (Desktop/Default)           */
+/* ================================================= */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -44,6 +47,12 @@ p {
     margin-bottom: 20px;
 }
 
+/* Ειδική Σήμανση Λέξης (Ανοιχτό Πράσινο) */
+.highlight {
+    color: #90EE90;       
+    font-weight: bold;
+}
+
 /* Λογότυπο */
 .logo-container {
     margin-bottom: 30px;
@@ -53,6 +62,7 @@ p {
     max-width: 180px; /* Μείωση μεγέθους για καλύτερη εφαρμογή */
     height: auto;
     filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+    border-radius: 8px; /* Προσθήκη στρογγυλεμένων γωνιών στην εικόνα */
 }
 
 /* Status Container */
@@ -80,6 +90,13 @@ p {
 
 .status-item:hover {
     background-color: #3f51b533;
+}
+
+.status-item.loading {
+    border-left-color: #f39c12; /* Κίτρινο για φόρτωση */
+    color: #f1c40f;
+    text-align: center;
+    grid-column: 1 / -1; /* Να καταλαμβάνει όλο το πλάτος */
 }
 
 /* Χρώματα κατάστασης */
@@ -142,6 +159,7 @@ select {
     font-size: 16px;
     background-color: #f9f9f9;
     transition: border-color 0.3s, box-shadow 0.3s;
+    color: #333; /* Για να φαίνεται το κείμενο μέσα στο ανοιχτό φόντο */
 }
 
 input:focus, select:focus {
@@ -199,17 +217,75 @@ button:disabled {
     margin-top: 25px;
     padding: 15px;
     border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    
+    /* Προσθήκη για να κρύβεται στην αρχή */
+    display: none; 
+}
+#message:not(.error) { /* Στυλ για μήνυμα επιτυχίας */
     background-color: #e8f5e9; /* Ανοιχτό πράσινο για επιτυχία */
     color: #2e7d32;
     border: 1px solid #c8e6c9;
-    font-weight: bold;
-    text-align: center;
 }
 #message.error {
     background-color: #ffe0b2; /* Πορτοκαλί για σφάλμα */
     color: #bf360c;
     border: 1px solid #ffcc80;
 }
+/* Η κλάση .header-image δεν χρειάζεται ειδικό στυλ εδώ, καθώς είναι ήδη ενσωματωμένο στο .logo-container img */
+
+
+/* ================================================= */
+/* 2. MEDIA QUERIES (Για Οθόνες Κινητών - Max 600px)*/
+/* ================================================= */
+
+@media (max-width: 600px) {
+    
+    .container {
+        padding: 15px; /* Μικρότερο padding στο container */
+        margin: 10px auto; /* Μικρότερο margin στην κορυφή */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Μικρότερος τίτλος */
+    }
+
+    /* Τα πεδία "Όνομα" και "Επώνυμο" να γίνονται στήλες (το ένα κάτω από το άλλο) */
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+    
+    /* Επαναφέρουμε το bottom margin για τα inputs μέσα στα form-group, ώστε να υπάρχει κενό */
+    .form-row .form-group input {
+        margin-bottom: 15px; 
+    }
+
+    /* Οι ενδείξεις κατάστασης (status) γίνονται μία στήλη */
+    .status-container {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .status-item {
+        font-size: 0.9em;
+    }
+
+    .form-card {
+        padding: 20px; /* Μικρότερο padding στη φόρμα */
+    }
+
+    .card-title {
+        font-size: 1.6em;
+    }
+}
+
 /* Προσθήκη για την εικόνα δίπλα στον τίτλο */
 .header-image {
     max-width: 100px; 
