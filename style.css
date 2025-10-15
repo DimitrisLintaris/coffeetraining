@@ -262,8 +262,15 @@ button:disabled {
     }
     
     /* Επαναφέρουμε το bottom margin για τα inputs μέσα στα form-group, ώστε να υπάρχει κενό */
-    .form-row .form-group input {
+    .form-row .form-group input,
+    .form-card select { /* Εφαρμογή και στο select */
         margin-bottom: 15px; 
+        font-size: 18px; /* ***ΑΥΞΗΣΗ FONT SIZE*** */
+        padding: 14px 15px; /* ***ΑΥΞΗΣΗ PADDING*** */
+    }
+
+    form label {
+        font-size: 1em; /* Ελαφρώς μεγαλύτερα labels */
     }
 
     /* Οι ενδείξεις κατάστασης (status) γίνονται μία στήλη */
@@ -274,7 +281,7 @@ button:disabled {
     }
     
     .status-item {
-        font-size: 0.9em;
+        font-size: 0.95em; /* Ελαφρά αύξηση */
     }
 
     .form-card {
@@ -283,6 +290,12 @@ button:disabled {
 
     .card-title {
         font-size: 1.6em;
+    }
+
+    /* Κουμπί Υποβολής */
+    button {
+        font-size: 20px; /* ***ΑΥΞΗΣΗ FONT SIZE*** */
+        padding: 18px 25px; /* ***ΑΥΞΗΣΗ PADDING*** */
     }
 }
 
