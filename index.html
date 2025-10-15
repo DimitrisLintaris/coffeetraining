@@ -1,0 +1,90 @@
+<body>
+<link rel="stylesheet" href="style.css">
+    <div class="container">
+        
+        <div class="logo-container">
+            <img src="logoparadosiakowhite.png" 
+                 alt="PARADOSIAKO Logo">
+        </div> <div class="header-content">
+            <img src="coffee3d2.png" alt="Coffee Cup" class="header-image">
+            <h1 class="form-title">Δήλωση Συμμετοχής</h1>			
+        </div>
+        <p class="form-description">Παρακαλώ συμπληρώστε τη φόρμα για να δηλώσετε συμμετοχή στα τμήματα εκπαίδευσης καφέ.</p>
+
+        <h3>Ζωντανή Κατάσταση Θέσεων</h3>
+        <p>Παρακολουθήστε ζωντανά την κατάσταση των διαθέσιμων θέσεων:</p>
+        <div class="status-container">
+            <div id="status-class_a" class="status-item available">Φόρτωση...</div>
+            <div id="status-class_b" class="status-item available">Φόρτωση...</div>
+            <div id="status-class_c" class="status-item available">Φόρτωση...</div>
+            <div id="status-class_d" class="status-item available">Φόρτωση...</div>
+            <div id="status-class_e" class="status-item available">Φόρτωση...</div>
+            <div id="status-class_f" class="status-item available">Φόρτωση...</div>
+        </div>
+
+        <hr class="separator">
+
+        <div class="form-card">
+             <h2 class="card-title">Συμπλήρωση Φόρμας</h2>
+
+            <form id="registration-form">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">Όνομα:</label>
+                        <input type="text" id="firstName" placeholder="Όνομα" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Επώνυμο:</label>
+                        <input type="text" id="lastName" placeholder="Επώνυμο" required>
+                    </div>
+                </div>
+                
+                <label for="phone">Τηλέφωνο:</label>
+                <input type="tel" id="phone" placeholder="Π.χ. 6944123456" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="user@example.com" required>
+                
+                <label for="store">Κατάστημα:</label>
+                <select id="store" required>
+                    <option value="">-- Επιλέξτε Κατάστημα --</option>
+                    <option value="Cosmos">Cosmos</option>
+                    <option value="One Salonica">One Salonica</option>
+                    <option value="Αγίας Σοφίας">Αγίας Σοφίας</option>
+                    <option value="Αριστοτέλους">Αριστοτέλους</option>
+                    <option value="Εγνατία">Εγνατία</option>
+                    <option value="Πανόραμα">Πανόραμα</option>
+                    <option value="Τούμπα">Τούμπα</option>
+                    <option value="Τσιμισκή 89">Τσιμισκή 89</option>
+                </select>
+                
+                <label for="job-title">Θέση Εργασίας:</label>
+                <select id="job-title" required>
+                    <option value="">-- Επιλέξτε Θέση --</option>
+                    <option value="Barista">Barista</option>
+                    <option value="Εξυπηρέτηση">Εξυπηρέτηση</option>
+                    <option value="Προϊστάμενος">Προϊστάμενος</option>
+                    <option value="Άλλο">Άλλο</option>
+                </select>
+                
+                <label for="section-select">Επιλογή Τμήματος:</label>
+                <select id="section-select" required>
+                    <option value="">-- Επιλέξτε Τμήμα --</option>
+                    <option value="class_a">Τμήμα Α</option>
+                    <option value="class_b">Τμήμα Β</option>
+                    <option value="class_c">Τμήμα Γ</option>
+                    <option value="class_d">Τμήμα Δ</option>
+                    <option value="class_e">Τμήμα Ε</option>
+                    <option value="class_f">Τμήμα ΣΤ</option>
+                </select>
+                
+                <button type="submit" id="submit-button">Δήλωση Συμμετοχής</button>
+            </form>
+
+            <div id="message"></div>
+            
+        </div> </div> <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="app.js"></script> 
+</body>
